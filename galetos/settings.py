@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
-    'localhost', 'galetos-orderapp-pp4.herokuapp.com',]
+    'localhost', 'galetos-orderapp-pp4-1411404b0904.herokuapp.com',]
 
 
 # Application definition
