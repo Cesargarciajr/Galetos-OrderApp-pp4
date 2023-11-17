@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+  <div class="col m-12">
+    <a href="{% url 'account_login' %}">
+        <div class="col m-1 mx-auto btn btn-success">
+            <i class="fa-regular fa-square-plus" style="color: #ffffff;"></i> 
+            ORDER NOW
+        </div>
+    </a>
+    <a href="#">
+        <div class="col m-1 mx-auto btn btn-info">
+            <i class="fa-solid fa-phone" style="color: #ffffff;"></i> 
+            CONTACT US
+        </div>
+    </a>
+    <a href="#">
+        <div class="col m-1 mx-auto btn btn-dark text-white">
+            <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i> 
+            ABOUT US
+        </div>
+    </a>
+  </div>
+</div>
+{% endblock content %}

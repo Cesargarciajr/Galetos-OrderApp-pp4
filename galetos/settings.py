@@ -32,6 +32,9 @@ ALLOWED_HOSTS = [
     '8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
     'localhost', 'galetos-orderapp-pp4-1411404b0904.herokuapp.com',]
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
+                        'https://galetos-orderapp-pp4-1411404b0904.herokuapp.com',]
+
 
 # Application definition
 
@@ -42,8 +45,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'orderapp',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
+
+# Django Allauth settings
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/neworder'
+LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# Crispy forms settings
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +73,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'galetos.urls'
