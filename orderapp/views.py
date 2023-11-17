@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import NewOrderForm
+from .forms import NewOrderForm, ContactForm
 
 # Rendering home page
 
@@ -23,3 +23,15 @@ def new_order(request):
 # Rendering Order List page
 def orders_list(request):
     return render(request, 'orders_list.html')
+
+
+# Rendering Contact us page
+def contact(request):
+    if request.method == "GET":
+        form = ContactForm()
+        return render(request, 'contact.html', {'form': form})
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('home')
