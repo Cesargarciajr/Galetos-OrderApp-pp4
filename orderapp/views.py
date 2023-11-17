@@ -35,3 +35,8 @@ def contact(request):
         if form.is_valid():
             form.save()
         return redirect('home')
+
+
+# Rendering About Us page
+def about(request):
+    return render(request, 'about.html')
