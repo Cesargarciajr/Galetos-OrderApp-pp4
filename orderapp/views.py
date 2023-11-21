@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import NewOrderForm, ContactForm
+from .models import NewOrderModel
 
 # Rendering home page
 
@@ -16,13 +17,17 @@ def new_order(request):
     else:
         form = NewOrderForm(request.POST)
         if form.is_valid():
-            form.save()
-        return redirect('/orderslist/')
+            order = form.save(commit=False)
+            order.author = request.user
+            order.save()
+            return redirect('/orderslist/')
+        return render(request, 'new_order.html', {'form': form})
 
 
 # Rendering Order List page
 def orders_list(request):
-    return render(request, 'orders_list.html')
+    context = {'orders_list': NewOrderModel.objects.all()}
+    return render(request, 'orders_list.html', context)
 
 
 # Rendering Contact us page

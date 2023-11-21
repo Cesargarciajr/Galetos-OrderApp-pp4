@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% load crispy_forms_tags %}
 
 {% block content %}
-    <form action="" method="post" autocomplete="off">
+    <form action="" method="POST" autocomplete="off">
         {% csrf_token %}
         <a href="{% url 'home' %}">
             <div class="col m-1 mx-auto btn btn-primary">

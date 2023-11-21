@@ -1,22 +1,24 @@
 {% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
-<form action="" method="post" autocomplete="off">
+<form action="" method="POST" autocomplete="off">
   {% csrf_token %}
   <div class="row">
     <h3 class="col-md-12 text-center">New Order</h3>
-    <br>
+    <br />
     <div class="col-md-6">{{ form.first_name|as_crispy_field }}</div>
     <div class="col-md-6">{{ form.last_name|as_crispy_field }}</div>
     <div class="col-md-6">{{ form.phone_number|as_crispy_field }}</div>
     <div class="col-md-6">{{ form.email|as_crispy_field }}</div>
   </div>
   <div class="row">
-    <div class="col-md-2">{{ form.quantity|as_crispy_field }}</div>
-    <div class="col-md-2">{{ form.date|as_crispy_field }}</div>
+    <div class="col-md-5">{{ form.date|as_crispy_field }}</div>
+    <div class="col-md-4">{{ form.time|as_crispy_field }}</div>
+    <div class="col-md-3">{{ form.quantity|as_crispy_field }}</div>
     <div class="col-md-10">
       <br />
       <button type="submit" class="btn btn-primary">
-        <i class="fa-solid fa-calendar-check" style="color: #ffffff;"></i>
-         Finish Order</button>
+        <i class="fa-solid fa-calendar-check" style="color: #ffffff"></i>
+        Finish Order
+      </button>
     </div>
   </div>
 </form>

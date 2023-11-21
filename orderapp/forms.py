@@ -1,14 +1,23 @@
 from django import forms
-from django.forms import DateInput
 from .models import NewOrderModel, ContactFormModel
 
+
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
+class TimeInput(forms.TimeInput):
+    input_type = 'time'
 
 class NewOrderForm(forms.ModelForm):
 
     class Meta:
         model = NewOrderModel
         fields = ('first_name', 'last_name', 'phone_number',
-                  'email', 'quantity', 'date')
+                  'email', 'quantity', 'date', 'time',)
+        widgets = {
+            'date': DateInput(),
+            'time': TimeInput(),
+        }
 
 
 class ContactForm(forms.ModelForm):

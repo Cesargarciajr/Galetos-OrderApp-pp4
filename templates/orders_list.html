@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>ORDER LIST GOES HERE</p>
+<div class="row">
+    <div class="col md-12">
+        <div class="table table-boderless">
+            <thread class="border-bottom font-weight-bold">
+                <tr>
+                    <td>Date</td>
+                    <td>Time</td>
+                    <td>Qnt</td>
+                    <td>Name</td>
+                </tr>
+            </thread>
+            <tbody>
+                {% for order in order_list %}
+                    <tr>
+                        <td>{{ order.date }}</td>
+                        <td>{{ order.time }}</td>
+                        <td>{{ order.quantity }}</td>
+                        <td>{{ order.first_name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </div> 
+    </div>
+</div>
 {% endblock content %}
