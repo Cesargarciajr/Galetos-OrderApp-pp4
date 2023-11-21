@@ -32,7 +32,7 @@ def new_order(request, id=0):
 
 # Rendering Order List page
 def orders_list(request):
-    context = {'orders_list':NewOrderModel.objects.all()}
+    context = {'orders_list':NewOrderModel.objects.filter(author=request.user)}
     return render(request, 'orders_list.html', context)
 
 
