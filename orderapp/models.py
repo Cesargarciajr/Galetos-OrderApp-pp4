@@ -11,12 +11,12 @@ class NewOrderModel(models.Model):
     first_name = models.CharField(max_length=200, unique=False)
     last_name = models.CharField(max_length=200, unique=False)
     phone_number = models.CharField(max_length=200, unique=False)
-    email = models.CharField(max_length=200, unique=True)
+    email = models.CharField(max_length=200, unique=False)
     quantity = models.IntegerField(unique=False)
 
     # Order dates
-    date = models.DateField()
-    time = models.Field()
+    date = models.DateField(auto_now=False, auto_now_add=False)
+    time = models.TimeField(auto_now=False, auto_now_add=False)
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)

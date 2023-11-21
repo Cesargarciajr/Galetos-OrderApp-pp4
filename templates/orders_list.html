@@ -1,28 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col md-12">
-        <div class="table table-boderless">
-            <thread class="border-bottom font-weight-bold">
+        <table class="table table-boderless table-responsive">
+            <thead class="border-bottom font-weight-bold">
                 <tr>
                     <td>Date</td>
                     <td>Time</td>
                     <td>Qnt</td>
                     <td>Name</td>
+                    <td>
+                        <a href="{% url 'neworder' %}" class="btn btn-sm btn-outline-success">
+                            <i class="fa-regular fa-square-plus"></i> New Order
+                        </a>
+                    </td>
                 </tr>
-            </thread>
+            </thead>
             <tbody>
-                {% for order in order_list %}
+                {% for order in orders_list %}
                     <tr>
                         <td>{{ order.date }}</td>
                         <td>{{ order.time }}</td>
                         <td>{{ order.quantity }}</td>
-                        <td>{{ order.first_name }}</td>
+                        <td>{{ order.first_name }} {{ order.last_name }}</td>
+                        <td>
+                            <a href="{% url 'orderupdate' order.id %}" class="btn text-secondary px0">
+                                <i class="far fa-edit fa-lg"></i>
+                            </a>
+                            <form action="{% url 'deleteorder' order.id %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                <button type="submit" class="btn">
+                                    <i class="far fa trash-alt fa-lg text-danger float-right"></i>
+                                    <i class="fa-solid fa-trash-can fa-lg text-danger float-right"></i>
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
-        </div> 
-    </div>
-</div>
+        </table> 
 {% endblock content %}

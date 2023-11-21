@@ -3,19 +3,25 @@ from .forms import NewOrderForm, ContactForm
 from .models import NewOrderModel
 
 # Rendering home page
-
-
 def home(request):
     return render(request, 'index.html')
 
 
 # Rendering New order page
-def new_order(request):
+def new_order(request, id=0):
     if request.method == "GET":
-        form = NewOrderForm()
+        if id == 0:
+            form = NewOrderForm()
+        else:
+            order = NewOrderModel.objects.get(pk=id)
+            form = NewOrderForm(instance=order)
         return render(request, 'new_order.html', {'form': form})
     else:
-        form = NewOrderForm(request.POST)
+        if id == 0:
+            form = NewOrderForm(request.POST)
+        else:
+            order = NewOrderModel.objects.get(pk=id)
+            form = NewOrderForm(request.POST,instance=order)
         if form.is_valid():
             order = form.save(commit=False)
             order.author = request.user
@@ -26,9 +32,15 @@ def new_order(request):
 
 # Rendering Order List page
 def orders_list(request):
-    context = {'orders_list': NewOrderModel.objects.all()}
+    context = {'orders_list':NewOrderModel.objects.all()}
     return render(request, 'orders_list.html', context)
 
+
+# Delete Order
+def delete_order(request, id):
+    order = NewOrderModel.objects.get(pk=id)
+    order.delete()
+    return redirect('/orderslist/')
 
 # Rendering Contact us page
 def contact(request):
