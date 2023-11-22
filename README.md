@@ -2,7 +2,7 @@
 
 <h1 align="center"><a href="https://galetos-orderapp-pp4-1411404b0904.herokuapp.com/" target="_blank">Galeto's</a></h1> 
 
-Galeto's a order app was desinged for a friend of mine who sells roasted chicken and needed some sort of simple looking ordering/booking systems for their clients to be able to order in advance their roasted chicken, and collect best time suited. The app meets all the needs of their business and help them to organise better their future sales and avoid waste.
+Galeto's a Django/Python developed order app that was desinged for a friend of mine who sells roasted chicken and needed some sort of simple looking ordering/booking systems for their clients to be able to order in advance their roasted chicken, and collect best time suited. The app meets all the needs of their business and help them to organise better their future sales and avoid waste.
 
 [**Link to Galeto's App Live **](https://galetos-orderapp-pp4-1411404b0904.herokuapp.com/)
 
@@ -43,21 +43,14 @@ ___
 
   ### User Stories
 
-  - #### First-Time Visitor Goals
-<br>    i.   As a First time user I want to be able to intuitively learn how to play the game without even reading the Rules.
-<br>    ii.  But if needed check the Rules and see if its clear.
-<br>    iii. I might have to contact the developer for any bug or leave a message.
-<br>    iv.  Have fun!
+<br>    i.   As a Site User I can register an account so that create, read, update and delete orders
+<br>    ii.  As a site user I can create orders on database so that have a order created
+<br>    iii. As a Site user I can view the orders I created so that manage the orders
+<br>    iv.  As a site user I can edit my orders so that modify the details of the orders
+<br>    v. As a site user I can delete my orders so that manage the orders
+<br>    vi. As a site user I can see about us page so that check opening ours and address for collection
+<br>    vii. As a site I can see the contact details and form so that get in touch with the retail if needed
 
-  - #### Returning Visitor Goals
-<br>    i.   As returning user I want the be able to play the game.
-<br>    ii.  Check if there is any updates to the game.
-<br>    iii. Have fun!
-
-  - #### Frequent User Goals
-<br>   i.   As frequent user I want the be able to play the game.
-<br>   ii.  Check if there is anyupdates to the game.
-<br>   iii. Have fun!
 
   [Back to top](<#contents>)
   
