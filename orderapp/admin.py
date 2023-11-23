@@ -5,9 +5,9 @@ from .models import NewOrderModel, ContactFormModel
 @admin.register(NewOrderModel)
 class PostNewOrder(admin.ModelAdmin):
     list_display = ('created_on','first_name', 'date', 'quantity', 'status')
-    list_filter = ('created_on', 'date')
+    list_filter = ('created_on', 'date', 'quantity', 'status')
     search_fields = ('created_on', 'date',
-                     'first_name', 'last_name', 'phone_number', 'email')
+                     'first_name', 'last_name', 'phone_number', 'email', 'status')
     actions = ['approve_orders']
 
     def approve_orders(self, request, queryset):

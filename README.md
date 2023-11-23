@@ -184,7 +184,8 @@ I used the following technologies, platforms and support in building my project:
 - [**Code Anywhere**](https://app.codeanywhere.com/) - for IDE and editor of the code.
 - [**Django**](https://www.djangoproject.com/) - framework to develop the app and athentications system "Allauth"
 - [**Bootstrap**](https://getbootstrap.com/) - for design and choices.
-- [**Heroku**](https://www.heroku.com/platform) was used for application deployment.
+- [**Heroku**](https://www.heroku.com/platform) - was used for application deployment.
+- [**Elephant SQL**](https://www.elephantsql.com/) - for database.
 - [**PEP8CI Validator**](https://app.codeanywhere.com/) - for error and issues with the code
 - [**Lucid**](https://lucid.co/) - Flowchart used on readme file.
 

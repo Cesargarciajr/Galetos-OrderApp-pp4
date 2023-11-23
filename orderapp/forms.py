@@ -2,12 +2,17 @@ from django import forms
 from .models import NewOrderModel, ContactFormModel
 
 
+# Render calendar widget
 class DateInput(forms.DateInput):
     input_type = 'date'
 
+
+# Render time selection widget
 class TimeInput(forms.TimeInput):
     input_type = 'time'
 
+
+# Defining what will be rendered in the form from NewOrderModel in models.py
 class NewOrderForm(forms.ModelForm):
 
     class Meta:
@@ -20,6 +25,7 @@ class NewOrderForm(forms.ModelForm):
         }
 
 
+# Defining what will be rendered in the form from ContactFormModel in models.py
 class ContactForm(forms.ModelForm):
 
     class Meta:
