@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import NewOrderForm, ContactForm
 from .models import NewOrderModel
 
+
 # Rendering home page
 def home(request):
     return render(request, 'index.html')
@@ -21,7 +22,7 @@ def new_order(request, id=0):
             form = NewOrderForm(request.POST)
         else:
             order = NewOrderModel.objects.get(pk=id)
-            form = NewOrderForm(request.POST,instance=order)
+            form = NewOrderForm(request.POST, instance=order)
         if form.is_valid():
             order = form.save(commit=False)
             order.author = request.user
@@ -41,6 +42,7 @@ def delete_order(request, id):
     order = NewOrderModel.objects.get(pk=id)
     order.delete()
     return redirect('/orderslist/')
+
 
 # Rendering Contact us page
 def contact(request):
