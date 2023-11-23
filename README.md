@@ -15,16 +15,16 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
     - [User Stories](#user-stories)
   - [Features](#features)
     - [Landing Play Page](#landing-play-page)
-    - [Welcome Message](#welcome-message)
-    - [Main Menu](#main-menu)
-    - [Rules Menu Option](#rules-menu-option)
-    - [Credits Menu Option](#credits-menu-option)
-    - [Start Game Menu Option](#start-game-menu-option)
-    - [Selected Valid Option](#selected-valid-option)
-    - [Comparing Computer vs User choices](#comparing-computer-vs-user-choices)
-    - [Tied Round](#tied-round)
-    - [Game Over](#game-over)
-    - [Hidden Features](#hidden-features)
+    - [Contact Us](#contact-us)
+    - [About Us](#about-us)
+    - [Log In](#log-in)
+    - [Sign Up](#sign-up)
+    - [New Order Form](#new-order-form)
+    - [Calendar](#calendar)
+    - [Time Selection](#time-selection)
+    - [Quantity Selection](#quantity-selection)
+    - [Orders list](#orders-list)
+    - [Edit Order](#edit-order)
     - [Future Features](#future-features)
   - [Testing](#testing)
     - [Bugs and Issues](#bugs-and-issues)
@@ -62,7 +62,7 @@ ___
 [Back to top](<#contents>)
 
   - ### Design Choices
-      The idea was to build a terminal based application with smooth transitions to make the UX even more seamless and intuitive. I added few diagrams to make the game more user friendly and make look better as you can see the [Features](#features) section.
+      The idea was to build a a simple "app-based" design with smooth transitions to make the UX even more seamless and intuitive. [Features](#features) section.
 
 
 [Back to top](<#contents>)
@@ -70,121 +70,101 @@ ___
 ## Features
 
   ### Landing Play Page
-As part of the game a landing area presents the Rock, Paper, Scissors and Gun as hints of how to "unlock" the Legend by selecting the gun to win over all options:
+Landing page was design to look like a simple booking app "menu-based" where the user can easily find and reach what their need with no distractions or missleading information. Ofering 3 simple options as: new order, contact us or about us.
 
-  ![Alt text](./assets/images/Hero-img.png "Landing Play Page") 
+  ![Alt text](static/media/images/landing.png "Landing Page") 
 
 [Back to top](<#contents>)
 
-  ### Welcome Message
-Welcome message gives the user a clear idea of the game and a 4.5 second to see this message while game is loading is a user friendly interaction.
+  ### Contact Us
+Contact us page has a simple form that can be filled intuitively by the user
 
-  ![Alt text](./assets/images/welcome-message.png "Welcome Message") 
+  ![Alt text](static/media/images/contact.png "Contact Us") 
   
 [Back to top](<#contents>)
         
-  ### Main Menu
-The main menu gives the user clear options to select and navigate through it.
+  ### About Us
+About us page contains the working hours and address with a google maps API for easily directions for the user
 
-  ![Alt text](./assets/images/main-menu.png "Main Menu") 
+  ![Alt text](static/media/images/about.png "About Us") 
 
 [Back to top](<#contents>)
 
-  ### Rules Menu Option
-Rules are clear and easy to understand making user experience more effective regarding to know how to play the game and use the system.
+  ### Log In
+Once the user choose the options new order he will be redirect to a login page that has instructions if the user does not have an account yet
 
-  ![Alt text](./assets/images/rules.png "Rules") 
+  ![Alt text](static/media/images/singin.png "Log in") 
  
 [Back to top](<#contents>)
 
-  ### Credits Menu Option
-Credits option gives the user to contact the developer in case o bugs or issues found, or to get in touch for futures projects
+  ### Sign Up
+If the user does not have an account already he will be asked to click the link in the log in page and follow the instructions to create a new account
 
-  ![Alt text](./assets/images/credits.png "Credits") 
+  ![Alt text](static/media/images/singup.png "Sign Up") 
  
 [Back to top](<#contents>)
 
-  ### Start Game Menu Option
-Once the user start the game it prints to the console a Rock, Paper, Scissors diagram to show user the options also prints the Round counter and a score section to keep track the progress of the game. Finally asks the user to input the option as the user can type "r" "R" "rock" respectivly to the options available. If not a "Invalid option will be printed"
+  ### New Order Form
+Once loged in the user will be redirected to the new order form that can be easily filled and completed.
 
-  ![Alt text](./assets/images/game-play.png "Game play") 
+  ![Alt text](static/media/images/neworder_form.png "New Order Form") 
  
 [Back to top](<#contents>)
 
-  ### Selected Valid Option
-Once a valid option is selected it will show what was selected and generated randomly by the computer
+  ### Calendar
+Whent he calendar is selected the built-in django widget pops to help user select best day suited.
 
-  ![Alt text](./assets/images/showing-choices.png "Show Choices") 
+  ![Alt text](static/media/images/calendar.png "Calendar") 
  
 [Back to top](<#contents>)
 
-  ### Comparing Computer vs User choices
-The system will compare the computer and the user choice and print an outcome for that round. Also increasing the round and the score if win or lose round
+  ### Time Selection
+time selection render django widget as well to better UX design.
 
-  ![Alt text](./assets/images/win-round.png "Win Round")
-  
-  ![Alt text](./assets/images/lost-round.png "Lose Round")
- 
+  ![Alt text](static/media/images/time.png "Time selection")
+   
 [Back to top](<#contents>)
 
-  ### Tied Round
-In case the round is Tied a message will be showed and no score will be increased
+  ### Quantity Selection
+Quantity selection could be typed in or selected by the picker
 
-  ![Alt text](./assets/images/tie-round.png "Tied Roun")
+  ![Alt text](static/media/images/quantity.png "Quantity Selection")
 
 [Back to top](<#contents>)
 
-  ### Game Over
-After 5 rounds system will compare the scores and print a final message:
+  ### Orders list
+Once the order is finished user will be redirected to orders list where the user could easily place another order, edit or delete the existing ones. It was designed toe be simple and intuitive.
 
-If user wins:
-
-  ![Alt text](./assets/images/final-win.png "User Wins")
-
-If user lose:
-
-  ![Alt text](./assets/images/game-over.png "Game Over")
-
-If its a tie:
-
-  ![Alt text](./assets/images/final-tie.png "Final Tie")
+  ![Alt text](static/media/images/orders_list.png "Order List")
 
  
 [Back to top](<#contents>)
 
-  ### Hidden Features
-The user can see the hints and "unlock" the hidden features. If user selects the "Gun" he will automatically will the game and a "Legend" message will be printed:
+  ### Edit Order
+If the user choose to edit and existing order the app will be redirect the the order form page but retrieving the data from database for editing.
 
-  ![Alt text](./assets/images/gun.png "Gun")
+  ![Alt text](static/media/images/edit_orders.png "Edit Order")
 
-If the user wins 3 out of 5 rounds the user will be asked to "finish" the computer the "Fatality" will be printed:
-
-  ![Alt text](./assets/images/finish-him.png "Finish Him")
-
-  ![Alt text](./assets/images/fatality.png "Fatality")
 
 [Back to top](<#contents>)
 
   ### Future Features
-For future features I think would be nice to make a colourful game for better user experience also implement if the user wins 3 times in a row he could activate the "nuclear bomb" and win the game. Those hidden features could make a difference and keep the users interested to play more and discover and unlock them. Also by adding a "raking" where user the input name and challange friends and keep record how many times user beated the computer.
+For future features I will definetly implement and disable past dates and out of work hours that I could not implement due the deadline. Also I would do some more UX design when delete or editing and a modal popup that gets a validation from user of their choice. Also a banner when order is created, updated or deleted to give user more assurance of their action. I would also implement and API system that could send a email confirmation to the user and the administrator thar a new order was created 
 
 
 [Back to top](<#contents>)
 
 ## Testing
 
-The game was tested and validate with PEP8CI with no errors. However the diagrams apresented a few flags and the solution is in the [Bugs and Issues](#bugs-and-issues) section of this file.
 
-![Alt text](assets/images/pep8.png "PEP8CI Report")
+![Alt text]( "PEP8CI Report")
 
 [Back to top](<#contents>)
 
  ### Bugs and Issues
-Debugging and troubleshooting were done constantly throughout development.
 
-the PEP8CI presented a few flags regarding to the diagrams and the solutions I found for those was to add "r" before some to the diagrams layout and a "# noqa" and the end of the diagrams, as you can see highlighted in the yellow box of the image below:
 
- ![Alt text](./assets/images/diagrams-solution.png "Diagrams Solution")
+ ![Alt text]( "Diagrams Solution")
 
  The links a found the solution are credited in the [Credits](#credits) section of this file.
 
@@ -291,7 +271,6 @@ Open your terminal (or Git Bash on Windows) and navigate to the directory where 
 
 ## Acknowledgments
 
-This project was fun and challenging at the same time. I learned so much while developing and trying to enhance a simple and old game was the biggest creative challange. My mentor [**Precious Ijege**](https://www.linkedin.com/in/precious-ijege-908a00168/) was fundamental to guide me and take the right approaches to the project, I can not forget to say a huge thanks to [**Tiago Fortaleza Gai**](https://www.linkedin.com/in/tiago-fortaleza-gai/) that helped me a lot with programming logics and helped me to debbug the code when I was stucked. I loved the final version of the game and I can say I'm proud of the final version and excited to keep updating and adding future features.
 
 by [**Cesar Garcia**](https://github.com/Cesargarciajr)
 
