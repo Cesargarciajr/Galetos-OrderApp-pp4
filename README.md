@@ -19,6 +19,7 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
     - [About Us](#about-us)
     - [Log In](#log-in)
     - [Sign Up](#sign-up)
+    - [Menu](#menu)
     - [New Order Form](#new-order-form)
     - [Calendar](#calendar)
     - [Time Selection](#time-selection)
@@ -62,7 +63,7 @@ ___
 [Back to top](<#contents>)
 
   - ### Design Choices
-      The idea was to build a a simple "app-based" design with smooth transitions to make the UX even more seamless and intuitive. All the colors and styles were applied with the built in classes provided that can be found on the [**Bootstrap**](#https://getbootstrap.com/) documentation.
+      The idea was to build a a simple "app-based" design with smooth transitions to make the UX even more seamless and intuitive. All the colors and styles were applied with the built in classes provided that can be found on the [**Bootstrap**](https://getbootstrap.com/) documentation.
 
 
 [Back to top](<#contents>)
@@ -101,6 +102,13 @@ Once the user choose the options new order he will be redirect to a login page t
 If the user does not have an account already he will be asked to click the link in the log in page and follow the instructions to create a new account
 
   ![Alt text](static/media/images/singup.png "Sign Up") 
+ 
+[Back to top](<#contents>)
+
+  ### Menu
+A menu is introduced to the user once loged in with three basic options: Home, Orders List and Log out.
+
+  ![Alt text](static/media/images/menu.png "Menu") 
  
 [Back to top](<#contents>)
 
