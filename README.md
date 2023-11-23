@@ -14,7 +14,7 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
   - [User Experience (UX)](#user-experience-ux)
     - [User Stories](#user-stories)
   - [Features](#features)
-    - [Landing Play Page](#landing-play-page)
+    - [Landing Page](#landing-page)
     - [Contact Us](#contact-us)
     - [About Us](#about-us)
     - [Log In](#log-in)
@@ -26,6 +26,11 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
     - [Quantity Selection](#quantity-selection)
     - [Orders list](#orders-list)
     - [Edit Order](#edit-order)
+    - [Django Admin Panel](#django-admin-panel)
+    - [Approve Orders](#approve-orders)
+    - [Order Details](#order-details)
+    - [Admin Filters](#admin-filters)
+    - [Messages](#messages)
     - [Future Features](#future-features)
   - [Testing](#testing)
     - [Bugs and Issues](#bugs-and-issues)
@@ -70,7 +75,7 @@ ___
 
 ## Features
 
-  ### Landing Play Page
+  ### Landing Page
 Landing page was design to look like a simple booking app "menu-based" where the user can easily find and reach what their need with no distractions or missleading information. Ofering 3 simple options as: new order, contact us or about us.
 
   ![Alt text](static/media/images/landing.png "Landing Page") 
@@ -141,7 +146,7 @@ Quantity selection could be typed in or selected by the picker
 [Back to top](<#contents>)
 
   ### Orders list
-Once the order is finished user will be redirected to orders list where the user could easily place another order, edit or delete the existing ones. It was designed toe be simple and intuitive.
+Once the order is finished user will be redirected to orders list where the user could easily place another order, edit or delete the existing ones. It was designed toeb be simple and  intuitive.
 
   ![Alt text](static/media/images/orders_list.png "Order List")
 
@@ -156,6 +161,46 @@ If the user choose to edit and existing order the app will be redirect the the o
 
 [Back to top](<#contents>)
 
+  ### Django Admin Panel
+The built in Django Admin panel was setted up to help the admin to manage the orders as well as reading the messages from costumers
+
+  ![Alt text](static/media/images/admin_neworder.png "Django Admin Panel")
+
+[Back to top](<#contents>)
+
+  ### Approve Orders
+All new orders are set to be Pendind an  get easily be approved by the admin panel
+
+
+  ![Alt text](static/media/images/approve_orders.png "Approve Orders")
+
+[Back to top](<#contents>)
+
+  ### Order Details
+Admin can have access to the order details through the admin panel.
+
+  ![Alt text](static/media/images/order_details.png "Order Details")
+
+[Back to top](<#contents>)
+
+  ### Admin Filters
+Admin have some filters feature to help locate orders such as pending orders, or approved ones and so on.
+
+  ![Alt text](static/media/images/filters.png "Admin Filters")
+
+[Back to top](<#contents>)
+
+  ### Messages
+Messages sent through the contact us page can be easily found on the admin panel as well as the message details.
+
+  ![Alt text](static/media/images/messages.png "Messages")
+
+  ![Alt text](static/media/images/message_details.png "Messages Detail")
+
+[Back to top](<#contents>)
+
+
+
   ### Future Features
 For future features I will definetly implement and disable past dates and out of work hours that I could not implement due the deadline. Also I would do some more UX design when delete or editing and a modal popup that gets a validation from user of their choice. Also a banner when order is created, updated or deleted to give user more assurance of their action. I would also implement and API system that could send a email confirmation to the user and the administrator thar a new order was created 
 
@@ -164,13 +209,32 @@ For future features I will definetly implement and disable past dates and out of
 
 ## Testing
 
+| Test                | Action                   | Success Criteria  |
+  | -------------       |-------------             | -----|
+  | Landingpage loads      | Navigate to website URL  | Page loads < 5s, no errors |
+  | Links            | Click on each Navigation link  | Correct section is redirected action performed |
+  | Athentications System  | User should be able Sign Up Log In and Log Out | All functions working fine as expected |
+  | CRUD Functionality  | User should be able to create edit and delete orders | All functions working fine as expected |
+  | Responsiveness | Resize the viewport window from 320px upwards with Chrome Dev Tools. Use Responsive Design Checker to test various mobile, tablet, and large screen sizes | Page layout remains intact and adapts to screen size|
+  | Different web browsers | Runned the app in Google Chrome, Mozilla Firefox and Internet Explorer | App works responsive and layout remains intact no errors or bug detected |
+  | Different screen devices | Runned the app using a Samsung Galaxy s20 and Iphone 13 | App works responsive and layout remains intact no errors or bug detected |
 
-![Alt text]( "PEP8CI Report")
+[Back to top](<#contents>)
+
+HTML validator
+![Alt text](static/media/images/html_validator.png "HTML Validator")
+
+PEP8 validator
+![Alt text](static/media/images/models_validator.png "PEP8 Validator")
+
+Over all Google Chrome LightHouse Report
+![Alt text](static/media/images/lighthouse.png "LightHouse Report")
 
 [Back to top](<#contents>)
 
  ### Bugs and Issues
 
+Debugging and troubleshooting were done constantly throughout development.
 
 [Back to top](<#contents>)
 
@@ -182,7 +246,7 @@ I used the following technologies, platforms and support in building my project:
 - The [**Code Institute**](https://codeinstitute.net/) modules/lessons aided my learning and many of the concepts learned were applied in this project.
 - [**GitHub**](https://github.com/Cesargarciajr/bloom-of-life) was used for the project repository.
 - [**Code Anywhere**](https://app.codeanywhere.com/) - for IDE and editor of the code.
-- [**Django**](https://www.djangoproject.com/) - framework to develop the app and athentications system "Allauth"
+- [**Django**](https://www.djangoproject.com/) - framework to develop the app and a few other libraries such as athentications system "Allauth" all specified in the requirements.txt file
 - [**Bootstrap**](https://getbootstrap.com/) - for design and choices.
 - [**Heroku**](https://www.heroku.com/platform) - was used for application deployment.
 - [**Elephant SQL**](https://www.elephantsql.com/) - for database.
@@ -276,7 +340,7 @@ Open your terminal (or Git Bash on Windows) and navigate to the directory where 
 [Back to top](<#contents>)
 
 ## Acknowledgments
-
+This project taught me a lot and helped me put in practice what I have learn throughout the Course specially getting to know more about Django frameworks and libraries. I was happy enough with the results and to be able to develop a real world application for a friend that will use it as a tool to better manage his business. I Thank the opportunity and help I got from all Code Institute Tutors, but special thanks to [**Sarah Collins**](https://github.com/SJECollins) that helped me a lot troubleshooting and explaining to me my questions.
 
 by [**Cesar Garcia**](https://github.com/Cesargarciajr)
 
