@@ -62,7 +62,7 @@ ___
 [Back to top](<#contents>)
 
   - ### Design Choices
-      The idea was to build a a simple "app-based" design with smooth transitions to make the UX even more seamless and intuitive. [Features](#features) section.
+      The idea was to build a a simple "app-based" design with smooth transitions to make the UX even more seamless and intuitive. All the colors and styles were applied with the built in classes provided that can be found on the [**Bootstrap**](#https://getbootstrap.com/) documentation.
 
 
 [Back to top](<#contents>)
@@ -164,10 +164,6 @@ For future features I will definetly implement and disable past dates and out of
  ### Bugs and Issues
 
 
- ![Alt text]( "Diagrams Solution")
-
- The links a found the solution are credited in the [Credits](#credits) section of this file.
-
 [Back to top](<#contents>)
 
 ___
@@ -178,6 +174,8 @@ I used the following technologies, platforms and support in building my project:
 - The [**Code Institute**](https://codeinstitute.net/) modules/lessons aided my learning and many of the concepts learned were applied in this project.
 - [**GitHub**](https://github.com/Cesargarciajr/bloom-of-life) was used for the project repository.
 - [**Code Anywhere**](https://app.codeanywhere.com/) - for IDE and editor of the code.
+- [**Django**](https://www.djangoproject.com/) - framework to develop the app and athentications system "Allauth"
+- [**Bootstrap**](https://getbootstrap.com/) - for design and choices.
 - [**Heroku**](https://www.heroku.com/platform) was used for application deployment.
 - [**PEP8CI Validator**](https://app.codeanywhere.com/) - for error and issues with the code
 - [**Lucid**](https://lucid.co/) - Flowchart used on readme file.
@@ -237,7 +235,11 @@ Open your terminal (or Git Bash on Windows) and navigate to the directory where 
 5. When you create the app, you will need to add two buildpacks from the Settings tab. The ordering is as follows:
     - heroku/python
     - heroku/nodejs
-6. You must then create a Config Var called PORT. Set this to 8000.
+6. You must then create the followinf Config Varw:
+   - PORT. Set this to 8000.
+   - DATABASE_URL. Set this to your database url.
+   - DISABLE_STATICFILES. Set to 0.
+   - SECRET_KEY. Set to your secret key.
 
 </details>
 
@@ -246,26 +248,21 @@ Open your terminal (or Git Bash on Windows) and navigate to the directory where 
 ## Credits
 
   ### Content  
-  - [**Code Institute**](https://codeinstitute.net/)  - Python Module and Tutor Support.
+  - [**Code Institute**](https://codeinstitute.net/)  - Tutor Support.
   - [**Code Institute Python Template**](https://github.com/Code-Institute-Org/python-essentials-template) - Template for Python mock terminal in Heroku.
   - [**GitHub**](https://github.com/) - for deployment and host.
   - [**Code Anywhere**](https://app.codeanywhere.com/) - for IDE and editor of the code.
-  - [**Precious Ijege**](https://www.linkedin.com/in/precious-ijege-908a00168/) - Mentor helping with insights and coding fix.
-  - [**Tiago Fortaleza Gai**](https://www.linkedin.com/in/tiago-fortaleza-gai/) - Helped throughout the project developing troubleshooting and debugging. 
   - [**W3 Schools**](https://www.w3schools.com/) - used for multiples researches and tutorials in HTML and CSS.
-  - [**Stack Overflow**](https://stackoverflow.com/questions/45346575/what-does-noqa-mean-in-python-comments) - solutions for the diagrams issue mentioned in the [Bugs and Issues](#bugs-and-issues) of this file
-  - [**PEP8 ORG**](https://pep8.org/#maximum-line-length) - solution for the flags regarding the diagrams in the PEP8 Validator mentioned in the [Bugs and Issues](#bugs-and-issues) of this file.
-  - [**Real Python**](https://realpython.com/python-pep8/#maximum-line-length-and-line-breaking) - Also provide with clarity the solution mentinoed in the [Bugs and Issues](#bugs-and-issues) of this file.
+  - [**Stack Overflow**](https://stackoverflow.com) - used to clarify questions and collect answers.
+  - [**PEP8 ORG**](https://pep8.org/#maximum-line-length) - solution for the flags regarding the diagrams in the PEP8 Validator 
+  - [**Real Python**](https://realpython.com/python-pep8) - Also provide with clarity the solutions
 
  
 [Back to top](<#contents>)
 
   ### Media
 - [**Lucid**](https://lucid.co/) - Flowchart used on readme file.
-- [**Pinterest**](https://www.pinterest.ie/pin/494340496574099065/) - Background image for the page.
-- [**Patorjk**](https://patorjk.com/software/taag/#p=display&f=Bloody&t=FATALITY) - provider with different fonts in diagrams terminal based.
-- [**ASCII Art**](https://www.asciiart.eu/weapons/guns) - provided gun ASCII art.
-
+- [**Bootstrap**](https://getbootstrap.com/) - for design and choices.
 
 [Back to top](<#contents>)
 
