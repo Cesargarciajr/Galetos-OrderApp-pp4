@@ -57,7 +57,7 @@ ___
   - ### FlowChart
     The flowchart was a very useful tool to plan ahead and understand how to build the application below you can see the chart that was made using the [**Lucid**](https://lucid.co/)
 
-    ![Alt text](assets/images/rps-flowchart.png "flowchart")
+    ![Alt text](static/media/images/GaletosFlowChart.png "flowchart")
 
 [Back to top](<#contents>)
 
