@@ -8,6 +8,7 @@
                     <td>Time</td>
                     <td>Qnt</td>
                     <td>Name</td>
+                    <td>Status</td>
                     <td>
                         <a href="{% url 'neworder' %}" class="btn btn-sm btn-outline-success">
                             <i class="fa-regular fa-square-plus"></i> New Order
@@ -22,6 +23,11 @@
                         <td>{{ order.time }}</td>
                         <td>{{ order.quantity }}</td>
                         <td>{{ order.first_name }} {{ order.last_name }}</td>
+                        {% if order.status == 0 %}
+                            <td> Pending </td>
+                        {% else %}
+                            <td> Approved </td>
+                        {% endif %}
                         <td>
                             <a href="{% url 'orderupdate' order.id %}" class="btn text-secondary px0">
                                 <i class="far fa-edit fa-lg"></i>
