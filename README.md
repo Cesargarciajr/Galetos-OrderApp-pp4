@@ -63,7 +63,7 @@ ___
    - ### Agile and Kanban
     GitHub Project Boards and Kanban are instrumental in collaborative project management. Using Kanban methodology, tasks move through stages like "To do," "In progress," "Testing," and "Done," providing a visual representation and limiting work in progress.
 
-    ![Alt text](static/media/images/agile.png "Agile Kanban")
+   ![Alt text](static/media/images/agile.png "Agile and Kanban")
 
 [Back to top](<#contents>)
 
