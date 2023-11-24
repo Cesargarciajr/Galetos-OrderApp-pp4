@@ -237,6 +237,9 @@ PEP8 validator
 Over all Google Chrome LightHouse Report
 ![Alt text](static/media/images/lighthouse.png "LightHouse Report")
 
+Automated testing with built in Django unittest
+![Alt text](static/media/images/test.png "Unittest Report")
+
 [Back to top](<#contents>)
 
  ### Bugs and Issues
