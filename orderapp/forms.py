@@ -1,5 +1,6 @@
 from django import forms
 from .models import NewOrderModel, ContactFormModel
+from django.utils import timezone
 
 
 # Render calendar widget
@@ -20,7 +21,7 @@ class NewOrderForm(forms.ModelForm):
         fields = ('first_name', 'last_name', 'phone_number',
                   'email', 'quantity', 'date', 'time',)
         widgets = {
-            'date': DateInput(),
+            'date': DateInput(attrs={'type': 'date', 'min': timezone.now().strftime('%Y-%m-%d')}),
             'time': TimeInput(),
         }
 

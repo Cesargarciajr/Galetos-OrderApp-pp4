@@ -60,6 +60,13 @@ ___
 
   [Back to top](<#contents>)
   
+   - ### Agile and Kanban
+    GitHub Project Boards and Kanban are instrumental in collaborative project management. Using Kanban methodology, tasks move through stages like "To do," "In progress," "Testing," and "Done," providing a visual representation and limiting work in progress.
+
+    ![Alt text](static/media/images/agile.png "Agile Kanban")
+
+[Back to top](<#contents>)
+
   - ### FlowChart
     The flowchart was a very useful tool to plan ahead and understand how to build the application below you can see the chart that was made using the [**Lucid**](https://lucid.co/)
 
