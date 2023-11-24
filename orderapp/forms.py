@@ -7,7 +7,6 @@ from django.utils import timezone
 class DateInput(forms.DateInput):
     input_type = 'date'
 
-
 # Render time selection widget
 class TimeInput(forms.TimeInput):
     input_type = 'time'

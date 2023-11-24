@@ -37,7 +37,7 @@ class ContactFormModel(models.Model):
     first_name = models.CharField(max_length=200, unique=False)
     last_name = models.CharField(max_length=200, unique=False)
     phone_number = models.CharField(max_length=200, unique=False)
-    email = models.CharField(max_length=200, unique=True)
+    email = models.CharField(max_length=200, unique=False)
     message = models.TextField(max_length=500, unique=False)
 
     def __str__(self):
