@@ -28,6 +28,18 @@
                 <p class="text-center"><strong>Order in advance for collection now!</strong></p>
                 <hr class="my-4">
                 <!--if user is authenticated it will display the menu area to manage orders-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
                 {% if user.is_authenticated %}
                 <a href="{% url 'home' %}">
                     <div class="col m-1 mx-auto btn btn-primary">
