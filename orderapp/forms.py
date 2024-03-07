@@ -51,7 +51,7 @@ class NewOrderForm(forms.ModelForm):
                   'email', 'quantity', 'date', 'time',)
         widgets = {
             'date': DateInput(attrs={'type': 'date', 'min': timezone.now().strftime('%Y-%m-%d')}),
-            'time': TimeInput(),
+            'time': TimeInput(attrs={'type': 'time', 'min': '10:00', 'max': '16:00'}),
         }
         
 

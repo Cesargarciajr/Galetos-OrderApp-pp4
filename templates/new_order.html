@@ -13,7 +13,7 @@
   </div>
   <div class="row">
     <div class="col-md-5">{{ form.date|as_crispy_field }}</div>
-    <div class="col-md-4">{{ form.time|as_crispy_field }}</div>
+    <div class="col-md-4" id="id_time">{{ form.time|as_crispy_field }}</div>
     <div class="col-md-3" value="1" min="1" max="99">{{ form.quantity|as_crispy_field }}</div>
     <div class="col-md-10">
       <br />
