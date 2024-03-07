@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import dj_database_url
+from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
 from pathlib import Path
@@ -23,17 +24,19 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'marmota123'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
-    'localhost', 'galetos-orderapp-pp4-1411404b0904.herokuapp.com',]
+    'localhost', 'galetos-orderapp-pp4-1411404b0904.herokuapp.com',
+    '8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu108.gitpod.io']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
-                        'https://galetos-orderapp-pp4-1411404b0904.herokuapp.com',]
+                        'https://galetos-orderapp-pp4-1411404b0904.herokuapp.com',
+                        'https://8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -60,6 +63,14 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/neworder'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-info',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+    }
 
 # Crispy forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -101,9 +112,17 @@ WSGI_APPLICATION = 'galetos.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation

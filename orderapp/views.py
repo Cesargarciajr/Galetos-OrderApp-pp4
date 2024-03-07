@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import NewOrderForm, ContactForm
 from .models import NewOrderModel
+from django.contrib import messages
+
 
 
 # Rendering home page
@@ -31,6 +33,16 @@ def new_order(request, id=0):
             order = form.save(commit=False)
             order.author = request.user
             order.save()
+            #checks if order is being updated or created to print out message.
+            if id == 0:
+                messages.success(request,
+                            f'Order created successfully!')
+            elif id > 0:
+                messages.success(request,
+                            f'Order updated successfully!')
+            else:
+                messages.error(request,
+                            f'Something went wrong, please try again!')
             return redirect('/orderslist/')
         return render(request, 'new_order.html', {'form': form})
 
@@ -46,6 +58,7 @@ def orders_list(request):
 def delete_order(request, id):
     order = NewOrderModel.objects.get(pk=id)
     order.delete()
+    messages.error(request, f'Order deleted successfully!')
     return redirect('/orderslist/')
 
 

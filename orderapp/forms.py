@@ -14,6 +14,13 @@ class TimeInput(forms.TimeInput):
 
 # Defining what will be rendered in the form from NewOrderModel in models.py
 class NewOrderForm(forms.ModelForm):
+    
+    first_name = forms.CharField(required=True)
+    last_name = forms.CharField(required=True)
+    phone_number = forms.CharField(required=True)
+    email = forms.EmailField(required=True)
+    quantity = forms.IntegerField(required=True)
+
 
     class Meta:
         model = NewOrderModel
@@ -23,6 +30,7 @@ class NewOrderForm(forms.ModelForm):
             'date': DateInput(attrs={'type': 'date', 'min': timezone.now().strftime('%Y-%m-%d')}),
             'time': TimeInput(),
         }
+        
 
 
 # Defining what will be rendered in the form from ContactFormModel in models.py

@@ -2,50 +2,73 @@
 
 {% block content %}
 <!--Creating a timetable with some of the details from the order-->
-        <table class="table table-boderless table-responsive">
-            <thead class="border-bottom font-weight-bold">
-                <tr>
-                    <td>Date</td>
-                    <td>Time</td>
-                    <td>Qnt</td>
-                    <td>Name</td>
-                    <td>Status</td>
-                    <td>
-                        <a href="{% url 'neworder' %}" class="btn btn-sm btn-outline-success">
-                            <i class="fa-regular fa-square-plus"></i> New Order
-                        </a>
-                    </td>
-                </tr>
-            </thead>
-            <tbody>
-                <!--loops all the orders from the user/author of the order-->
-                {% for order in orders_list %}
-                    <tr>
-                        <td>{{ order.date }}</td>
-                        <td>{{ order.time }}</td>
-                        <td>{{ order.quantity }}</td>
-                        <td>{{ order.first_name }} {{ order.last_name }}</td>
-                        <!--checking what is the status of the order and print back to costumer-->
-                        {% if order.status == 0 %}
-                            <td> Pending </td>
-                        {% else %}
-                            <td> Approved </td>
-                        {% endif %}
-                        <td>
-                            <!--buttons for editing or deleting the order-->
-                            <a href="{% url 'orderupdate' order.id %}" class="btn text-secondary px0">
-                                <i class="far fa-edit fa-lg"></i>
-                            </a>
-                            <form action="{% url 'deleteorder' order.id %}" method="POST" class="d-inline">
-                                {% csrf_token %}
-                                <button type="submit" class="btn">
-                                    <i class="far fa trash-alt fa-lg text-danger float-right"></i>
-                                    <i class="fa-solid fa-trash-can fa-lg text-danger float-right"></i>
+<table class="table table-boderless table-responsive">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Qnt</td>
+            <td>Name</td>
+            <td>Status</td>
+            <td>
+                <a href="{% url 'neworder' %}" class="btn btn-sm btn-outline-success">
+                    <i class="fa-regular fa-square-plus"></i> New Order
+                </a>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <!--loops all the orders from the user/author of the order-->
+        {% for order in orders_list %}
+        <tr>
+            <td>{{ order.date }}</td>
+            <td>{{ order.time }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.first_name }} {{ order.last_name }}</td>
+            <!--checking what is the status of the order and print back to costumer-->
+            {% if order.status == 0 %}
+            <td> Pending </td>
+            {% else %}
+            <td> Approved </td>
+            {% endif %}
+            <td>
+                <!--buttons for editing or deleting the order-->
+                <a href="{% url 'orderupdate' order.id %}" class="btn text-secondary px0">
+                    <i class="far fa-edit fa-lg"></i>
+                </a>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#Modal">
+                    <i class="far fa trash-alt fa-lg text-danger float-right"></i>
+                    <i class="fa-solid fa-trash-can fa-lg text-danger float-right"></i>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this
+                                    order?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
                                 </button>
-                            </form>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table> 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+                                <form action="{% url 'deleteorder' order.id %}" method="POST" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock content %}
