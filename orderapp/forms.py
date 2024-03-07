@@ -23,6 +23,18 @@ class NumericPhoneNumberField(forms.CharField):
             raise forms.ValidationError("It must contain only numbers. Ex. 0123456789")
 
 
+# Custom form field to get valid number
+class PositiveIntegerField(forms.IntegerField):
+    def __init__(self, *args, **kwargs):
+        kwargs['min_value'] = 1  # Set minimum value to 1
+        super().__init__(*args, **kwargs)
+
+    def validate(self, value):
+        super().validate(value)
+        if value <= 0:
+            raise forms.ValidationError("Quantity must be a positive number.")
+
+
 # Defining what will be rendered in the form from NewOrderModel in models.py
 class NewOrderForm(forms.ModelForm):
 
@@ -30,7 +42,7 @@ class NewOrderForm(forms.ModelForm):
     last_name = forms.CharField(required=True)
     phone_number = NumericPhoneNumberField(required=True)
     email = forms.EmailField(required=True)
-    quantity = forms.IntegerField(required=True)
+    quantity = PositiveIntegerField(required=True)
 
 
     class Meta:

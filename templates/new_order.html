@@ -14,11 +14,7 @@
   <div class="row">
     <div class="col-md-5">{{ form.date|as_crispy_field }}</div>
     <div class="col-md-4">{{ form.time|as_crispy_field }}</div>
-    <div class="col-md-3">
-      <input class="form-control qty_input" type="number"
-      name="quantity" value="1" min="1" max="10"
-      data-item_id="{{ product.id }}"
-      id="id_qty_{{ product.id }}"></div>
+    <div class="col-md-3" value="1" min="1" max="99">{{ form.quantity|as_crispy_field }}</div>
     <div class="col-md-10">
       <br />
       <button type="submit" class="btn btn-primary">
