@@ -1,10 +1,8 @@
-{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %} {% load static %}
 <form action="" method="POST" autocomplete="off">
   {% csrf_token %}
-  <div class="row">
-    <h3 class="col-md-12 text-center">Order Details</h3>
-    <br>
-    <br>
+  <div class="row mt-0">
+    <h3 class="col-md-12 text-center mt-4">Order Details</h3>
     <!--Defining what will be rendered from forms in the page-->
     <div class="col-md-6">{{ form.first_name|as_crispy_field }}</div>
     <div class="col-md-6">{{ form.last_name|as_crispy_field }}</div>

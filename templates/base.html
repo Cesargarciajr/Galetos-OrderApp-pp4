@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,61 +15,76 @@
     <!-- FontAwesome Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Galeto's</title>
 </head>
+
 <body>
     <!-- Defining container and jumbotron area-->
     <div class="container">
         <div class="col-md-8 offset-md-2 mt-5">
-            <div class="jumbotron">
+            <div class="jumbotron pt-5">
                 <!--Galetos title and link to home page-->
-                <a href="{% url 'home' %}"><h1 class="display-4 text-center">Galeto's</h1></a>
-                <p class="lead font-italic text-center">Best Roasted Chicken in Dublin</p>
-                <p class="text-center"><strong>Order in advance for collection now!</strong></p>
-                <hr class="my-4">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static '/media/images/logo.webp' %}" class="img-fluid" alt="galetos-logo"
+                            style="height: 200px; width: 200px;">
+                    </a>
+                </div>
+                <br>
+                <h5 class="col-md-12 text-center"> From our Oven to your Table!</h5>
+                <p class="text-center">Order in advance for collection now</p>
                 <!--if user is authenticated it will display the menu area to manage orders-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                {{ message | safe }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-                {% if user.is_authenticated %}
-                <a href="{% url 'home' %}">
-                    <div class="col m-1 mx-auto btn btn-primary">
-                        <i class="fa-solid fa-house" style="color: #ffffff;"></i>
-                        Home </div>
-                <a href="{% url 'orderslist'  %}">
-                    <div class="col m-1 mx-auto btn btn-info">
-                        <i class="fa-solid fa-list" style="color: #ffffff;"></i>
-                        Your Orders</div>
-                <a href="{% url 'account_logout'  %}">
-                    <div class="col m-1 mx-auto btn btn-danger">
-                        <i class="fa-solid fa-door-open" style="color: #ffffff;"></i>
-                        Log Out
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            {% for message in messages %}
+                            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                                {{ message | safe }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
-                </a>
-                    <hr class="my-4">
-                {% endif %}
-                <!--Where the content will be rendered-->
-                {% block content %}
-                {% endblock content%}
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'home' %}">
+                        <div class="col m-1 mx-auto btn btn-primary">
+                            <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                            Home
+                        </div>
+                        <a href="{% url 'orderslist'  %}">
+                            <div class="col m-1 mx-auto btn btn-info">
+                                <i class="fa-solid fa-list" style="color: #ffffff;"></i>
+                                Your Orders
+                            </div>
+                            <a href="{% url 'account_logout'  %}">
+                                <div class="col m-1 mx-auto btn btn-danger">
+                                    <i class="fa-solid fa-door-open" style="color: #ffffff;"></i>
+                                    Log Out
+                                </div>
+                            </a>
+                            <hr class="mb-0">
+                            {% endif %}
+                            <!--Where the content will be rendered-->
+                            {% block content %}
+                            {% endblock content%}
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Bootstrap scripts link -->
-<script src="{% static 'js/script.js' %}"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap scripts link -->
+        <script src="{% static 'js/script.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
+
 </html>
