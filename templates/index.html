@@ -1,5 +1,32 @@
 {% extends "base.html" %} {% block content %} {% load static %}
+<div class="row mt-0">
+</a>
+<hr class="mb-0">
+<div class="col m-12 mt-4">
+    <a href="{% url 'account_login' %}">
+        <!--definig the buttons of main menu in the home page-->
+        <div class="col m-1 mx-auto btn btn-success">
+            <i class="fa-regular fa-square-plus" style="color: #ffffff;"></i>
+            ORDER NOW
+        </div>
+    </a>
+    <a href="{% url 'contact' %}">
+        <div class="col m-1 mx-auto btn btn-info">
+            <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+            CONTACT US
+        </div>
+    </a>
+    <a href="{% url 'about' %}">
+        <div class="col m-1 mx-auto btn btn-dark text-white">
+            <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
+            ABOUT US
+        </div>
+    </a>
+</div>
+</div>
+<hr class="my-4">
 <!-- Carousel images -->
+<h5 class="col-md-12 text-center"> From our Oven to your Table!</h5>
 <div id="carouselExampleIndicators" class="carousel slide col-md-12" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -7,7 +34,7 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
-    <div class="carousel-inner rounded shadow" style="height: 300px;">
+    <div class="carousel-inner rounded shadow">
         <div class="carousel-item active">
             <img class="d-block w-100" src="{% static '/media/images/first.webp' %}" alt="First slide">
         </div>
@@ -30,31 +57,5 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
-<hr class="my-4">
-<div class="row mt-0">
-            </a>
-            <hr class="mb-0">
-            <div class="col m-12 mt-4">
-                <a href="{% url 'account_login' %}">
-                    <!--definig the buttons of main menu in the home page-->
-                    <div class="col m-1 mx-auto btn btn-success">
-                        <i class="fa-regular fa-square-plus" style="color: #ffffff;"></i>
-                        ORDER NOW
-                    </div>
-                </a>
-                <a href="{% url 'contact' %}">
-                    <div class="col m-1 mx-auto btn btn-info">
-                        <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
-                        CONTACT US
-                    </div>
-                </a>
-                <a href="{% url 'about' %}">
-                    <div class="col m-1 mx-auto btn btn-dark text-white">
-                        <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
-                        ABOUT US
-                    </div>
-                </a>
-            </div>
 </div>
 {% endblock content %}

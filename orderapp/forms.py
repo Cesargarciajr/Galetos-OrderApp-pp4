@@ -13,13 +13,10 @@ class TimeInput(forms.TimeInput):
     input_type = 'time'
 
 
-# Custom form field for phone number with numeric validation
 class NumericPhoneNumberField(forms.CharField):
     def validate(self, value):
         super().validate(value)
-        try:
-            int(value)  # Try converting the value to an integer
-        except ValueError:
+        if not value.isdigit():  # Check if value contains non-digit characters
             raise forms.ValidationError("It must contain only numbers. Ex. 0123456789")
 
 

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import NewOrderForm, ContactForm
 from .models import NewOrderModel
 from django.contrib import messages
+from django.http import HttpResponse  # Import HttpResponse for debugging
 
 
 
@@ -61,19 +62,21 @@ def delete_order(request, id):
     messages.error(request, f'Order deleted successfully!')
     return redirect('/orderslist/')
 
-
-# Rendering Contact us page
 def contact(request):
-    # if the method is GET it will render the contact form
     if request.method == "GET":
         form = ContactForm()
         return render(request, 'contact.html', {'form': form})
     else:
         form = ContactForm(request.POST)
-        ## checks if the form is valid and save to database
         if form.is_valid():
             form.save()
-        return redirect('home')
+            messages.success(request, 'Message sent successfully!')
+            return redirect('home')  # Redirect only when form is valid
+        else:
+            print(form.errors)
+            messages.error(request, 'Something went wrong! Please try again.')
+            return render(request, 'contact.html', {'form': form})  # Render the contact page with the invalid form
+
 
 
 # Rendering About Us page

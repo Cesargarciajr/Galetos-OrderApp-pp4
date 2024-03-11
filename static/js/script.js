@@ -17,11 +17,13 @@ $(document).ready(function() {
         $('#id_time').attr('max', '16:00');
     }
 
-    // Call the function when the page loads
-    updateMinAndMaxTime();
-
-    // Call the function whenever the time input value changes
-    $('#id_time').on('input', function() {
+    // Call the function if the element with id_time exists
+    if ($('#id_time').length) {
         updateMinAndMaxTime();
-    });
+
+        // Call the function whenever the time input value changes
+        $('#id_time').on('input', function() {
+            updateMinAndMaxTime();
+        });
+    }
 });

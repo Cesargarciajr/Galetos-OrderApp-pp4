@@ -32,12 +32,12 @@
                     </a>
                 </div>
                 <br>
-                <h5 class="col-md-12 text-center"> From our Oven to your Table!</h5>
                 <p class="text-center">Order in advance for collection now</p>
+                <hr class="my-0">
                 <!--if user is authenticated it will display the menu area to manage orders-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8 offset-md-2">
+                        <div class="col-md-8 offset-md-2 my-2">
                             {% for message in messages %}
                             <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                                 {{ message | safe }}
@@ -65,7 +65,6 @@
                                     Log Out
                                 </div>
                             </a>
-                            <hr class="mb-0">
                             {% endif %}
                             <!--Where the content will be rendered-->
                             {% block content %}
@@ -85,6 +84,7 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </body>
 
 </html>

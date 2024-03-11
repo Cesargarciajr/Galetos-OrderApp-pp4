@@ -1,11 +1,12 @@
-{% extends "base.html" %} {% load crispy_forms_tags %}
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
     <form action="" method="POST" autocomplete="off">
         {% csrf_token %}
         <div class="row">
             <h3 class="col-md-12 text-center">Have a Project in mind?</h3>
-                <br><h4 class="col-md-12 text-center">Send us a message!</h4>
+            <br><h4 class="col-md-12 text-center">Send us a message!</h4>
             <br>
             <br>
             <!--Defining what will be rendered from forms to the page-->
