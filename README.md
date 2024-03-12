@@ -4,9 +4,9 @@
 
 Galeto's a Django/Python developed order app that was desinged for a friend of mine who sells roasted chicken and needed some sort of simple looking ordering/booking systems for their clients to be able to order in advance their roasted chicken, and collect best time suited. The app meets all the needs of their business and help them to organise better their future sales and avoid waste.
 
-[**Link to Galeto's App Live **](https://galetos-orderapp-pp4-1411404b0904.herokuapp.com/)
+[**Link to Galeto's App Live**](https://galetos-orderapp-pp4-1411404b0904.herokuapp.com/)
 
-![Alt text](static/media/images/hero-image.png "Hero image for Readme File")
+![Alt text](static/media/images/landing-page.png "Hero image for Readme File")
 
 # Contents
 
@@ -63,19 +63,29 @@ ___
    - ### Agile and Kanban
 GitHub Project Boards and Kanban are instrumental in collaborative project management. Using Kanban methodology, tasks move through stages like "To do," "In progress," "Testing," and "Done," providing a visual representation and limiting work in progress.
 
-   ![Alt text](static/media/images/agile.png "Agile and Kanban")
+   ![Alt text](static/media/images/kanban.png "Agile and Kanban")
 
 [Back to top](<#contents>)
 
   - ### FlowChart
     The flowchart was a very useful tool to plan ahead and understand how to build the application below you can see the chart that was made using the [**Lucid**](https://lucid.co/)
 
-    ![Alt text](static/media/images/GaletosFlowChart.png "flowchart")
+    ![Alt text](static/media/images/flowchart.png "flowchart")
 
 [Back to top](<#contents>)
 
   - ### Design Choices
       The idea was to build a a simple "app-based" design with smooth transitions to make the UX even more seamless and intuitive. All the colors and styles were applied with the built in classes provided that can be found on the [**Bootstrap**](https://getbootstrap.com/) documentation.
+
+  - ### Wireframes
+      Wireframes were designed with [**Balsamiq**](https://balsamiq.com) tool
+      ![Alt text](static/media/images/landing-page-wf.png "lading wf")
+      ![Alt text](static/media/images/neworder-page-wf.png "neworder-page-wf")
+      ![Alt text](static/media/images/orderlist-page-wf.png "orderlist-page-wf")
+      ![Alt text](static/media/images/contactus-page-wf.png "contactus-page-wf")
+      ![Alt text](static/media/images/aboutus-page-wf.png "aboutus-page-wf")
+
+    
 
 
 [Back to top](<#contents>)
