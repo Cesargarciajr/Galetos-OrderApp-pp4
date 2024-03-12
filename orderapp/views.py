@@ -13,7 +13,7 @@ def home(request):
 
 # Rendering New order page posting and retrieving data from database
 def new_order(request, id=0):
-    # if the methode is GET and id as 0 it will render tem form for New Order
+    # if the method is GET and id as 0 it will render tem form for New Order
     if request.method == "GET":
         if id == 0:
             form = NewOrderForm()
@@ -62,6 +62,7 @@ def delete_order(request, id):
     messages.error(request, f'Order deleted successfully!')
     return redirect('/orderslist/')
 
+# Contact us
 def contact(request):
     if request.method == "GET":
         form = ContactForm()
