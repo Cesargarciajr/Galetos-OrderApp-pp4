@@ -227,17 +227,72 @@ For future features I will definetly implement and disable past dates and out of
 
 [Back to top](<#contents>)
 
-HTML validator
-![Alt text](static/media/images/html_validator.png "HTML Validator")
 
-PEP8 validator
-![Alt text](static/media/images/models_validator.png "PEP8 Validator")
+<details>
+<summary>HTML validators</summary>
 
-Over all Google Chrome LightHouse Report
-![Alt text](static/media/images/lighthouse.png "LightHouse Report")
+No major issues were identified on the HTML Validator
+
+Index Page
+![Alt text](static/media/images/index.png "HTML Validator index")
+
+Contact Page
+![Alt text](static/media/images/contact.png "HTML Validator contact")
+
+About Page
+![Alt text](static/media/images/about.png "HTML Validator about")
+
+Neworder Page
+![Alt text](static/media/images/neworder.png "HTML Validator neworder")
+
+Login Page
+![Alt text](static/media/images/login.png "HTML Validator login")
+
+</details>
+
+<details>
+<summary>CSS Validator</summary>
+  
+All issues and warning are regarding fontawesome CDN library as shown on CSS Report. No other issue located
+
+![Alt text](static/media/images/css.png "CSS Validator")
+
+</details>
+
+<details>
+<summary>Jshint Validator</summary>
+
+No major issue found on the Jshint validator:
+![Alt text](static/media/images/jshint.png "jshint Validator")
+
+</details>
+
+<details>
+<summary>PEP8 validator</summary>
+
+Used PEP8 Validator from Code Institute and all issues have been resolved.
+
+Models:
+![Alt text](static/media/images/models.png "PEP8 Validator models")
+
+Views:
+![Alt text](static/media/images/views.png "PEP8 Validator views")
+
+Urls:
+![Alt text](static/media/images/urls.png "PEP8 Validator views")
+
+Test:
+![Alt text](static/media/images/test.png "PEP8 Validator test")
+
+</details>
+
+<details>
+<summary>Automated Testing</summary>
 
 Automated testing with built in Django unittest
-![Alt text](static/media/images/test.png "Unittest Report")
+![Alt text](static/media/images/auto-test.png "Unittest Report")
+
+</details>
 
 [Back to top](<#contents>)
 
@@ -254,14 +309,18 @@ I used the following technologies, platforms and support in building my project:
 - The application was built in Python.
 - The [**Code Institute**](https://codeinstitute.net/) modules/lessons aided my learning and many of the concepts learned were applied in this project.
 - [**GitHub**](https://github.com/Cesargarciajr/bloom-of-life) was used for the project repository.
-- [**Code Anywhere**](https://app.codeanywhere.com/) - for IDE and editor of the code.
+- [**GitPod**](https://www.gitpod.io/) - for IDE and editor of the code.
 - [**Django**](https://www.djangoproject.com/) - framework to develop the app and a few other libraries such as athentications system "Allauth" all specified in the requirements.txt file
 - [**Bootstrap**](https://getbootstrap.com/) - for design and choices.
 - [**Heroku**](https://www.heroku.com/platform) - was used for application deployment.
 - [**Elephant SQL**](https://www.elephantsql.com/) - for database.
 - [**PEP8CI Validator**](https://app.codeanywhere.com/) - for error and issues with the code
 - [**Lucid**](https://lucid.co/) - Flowchart used on readme file.
+- [**Canva**](https://www.canva.com/) - For all images
+- [**FontAwesome**](https://fontawesome.com/icons) - Used for icons
+- [**Cloudinary**](https://www.cloudimage.io/) - Used to store media files
 
+  
 [Back to top](<#contents>)
 
 ## Deployment
@@ -333,7 +392,7 @@ Open your terminal (or Git Bash on Windows) and navigate to the directory where 
   - [**Code Institute**](https://codeinstitute.net/)  - Tutor Support.
   - [**Code Institute Python Template**](https://github.com/Code-Institute-Org/python-essentials-template) - Template for Python mock terminal in Heroku.
   - [**GitHub**](https://github.com/) - for deployment and host.
-  - [**Code Anywhere**](https://app.codeanywhere.com/) - for IDE and editor of the code.
+  - [**GitPod**](https://www.gitpod.io/) - for IDE and editor of the code.
   - [**W3 Schools**](https://www.w3schools.com/) - used for multiples researches and tutorials in HTML and CSS.
   - [**Stack Overflow**](https://stackoverflow.com) - used to clarify questions and collect answers.
   - [**PEP8 ORG**](https://pep8.org/#maximum-line-length) - solution for the flags regarding the diagrams in the PEP8 Validator 
@@ -345,6 +404,9 @@ Open your terminal (or Git Bash on Windows) and navigate to the directory where 
   ### Media
 - [**Lucid**](https://lucid.co/) - Flowchart used on readme file.
 - [**Bootstrap**](https://getbootstrap.com/) - for design and choices.
+- [**FontAwesome**](https://fontawesome.com/icons) - Used for icons
+- [**Cloudinary**](https://www.cloudimage.io/) - Used to store media files
+- [**Canva**](https://www.canva.com/) - For all images
 
 [Back to top](<#contents>)
 
