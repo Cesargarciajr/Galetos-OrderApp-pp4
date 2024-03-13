@@ -13,6 +13,8 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
 - [Contents](#contents)
   - [User Experience (UX)](#user-experience-ux)
     - [User Stories](#user-stories)
+    - [Design Choices](#design-choices)
+    - [Wireframes](#wireframes)
   - [Features](#features)
     - [Landing Page](#landing-page)
     - [Contact Us](#contact-us)
@@ -23,7 +25,6 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
     - [New Order Form](#new-order-form)
     - [Calendar](#calendar)
     - [Time Selection](#time-selection)
-    - [Quantity Selection](#quantity-selection)
     - [Orders list](#orders-list)
     - [Edit Order](#edit-order)
     - [Django Admin Panel](#django-admin-panel)
@@ -85,9 +86,6 @@ GitHub Project Boards and Kanban are instrumental in collaborative project manag
       ![Alt text](static/media/images/contactus-page-wf.png "contactus-page-wf")
       ![Alt text](static/media/images/aboutus-page-wf.png "aboutus-page-wf")
 
-    
-
-
 [Back to top](<#contents>)
 
 ## Features
@@ -95,77 +93,70 @@ GitHub Project Boards and Kanban are instrumental in collaborative project manag
   ### Landing Page
 Landing page was design to look like a simple booking app "menu-based" where the user can easily find and reach what their need with no distractions or missleading information. Ofering 3 simple options as: new order, contact us or about us.
 
-  ![Alt text](static/media/images/landing.png "Landing Page") 
+  ![Alt text](static/media/images/landing-page.png "Landing Page") 
 
 [Back to top](<#contents>)
 
   ### Contact Us
 Contact us page has a simple form that can be filled intuitively by the user
 
-  ![Alt text](static/media/images/contact.png "Contact Us") 
+  ![Alt text](static/media/images/contactus.png "Contact Us") 
   
 [Back to top](<#contents>)
         
   ### About Us
 About us page contains the working hours and address with a google maps API for easily directions for the user
 
-  ![Alt text](static/media/images/about.png "About Us") 
+  ![Alt text](static/media/images/aboutus-page.png "About Us") 
 
 [Back to top](<#contents>)
 
   ### Log In
 Once the user choose the options new order he will be redirect to a login page that has instructions if the user does not have an account yet
 
-  ![Alt text](static/media/images/singin.png "Log in") 
+  ![Alt text](static/media/images/singin-page.png "Log in") 
  
 [Back to top](<#contents>)
 
   ### Sign Up
 If the user does not have an account already he will be asked to click the link in the log in page and follow the instructions to create a new account
 
-  ![Alt text](static/media/images/singup.png "Sign Up") 
+  ![Alt text](static/media/images/singup-page.png "Sign Up") 
  
 [Back to top](<#contents>)
 
   ### Menu
 A menu is introduced to the user once loged in with three basic options: Home, Orders List and Log out.
 
-  ![Alt text](static/media/images/menu.png "Menu") 
+  ![Alt text](static/media/images/singnedin-home.png "Menu") 
  
 [Back to top](<#contents>)
 
   ### New Order Form
 Once loged in the user will be redirected to the new order form that can be easily filled and completed.
 
-  ![Alt text](static/media/images/neworder_form.png "New Order Form") 
+  ![Alt text](static/media/images/neworder-page.png "New Order Form") 
  
 [Back to top](<#contents>)
 
   ### Calendar
 Whent he calendar is selected the built-in django widget pops to help user select best day suited.
 
-  ![Alt text](static/media/images/calendar.png "Calendar") 
+  ![Alt text](static/media/images/calendar-widget.png "Calendar") 
  
 [Back to top](<#contents>)
 
   ### Time Selection
 time selection render django widget as well to better UX design.
 
-  ![Alt text](static/media/images/time.png "Time selection")
+  ![Alt text](static/media/images/time-widget.png "Time selection")
    
-[Back to top](<#contents>)
-
-  ### Quantity Selection
-Quantity selection could be typed in or selected by the picker
-
-  ![Alt text](static/media/images/quantity.png "Quantity Selection")
-
 [Back to top](<#contents>)
 
   ### Orders list
 Once the order is finished user will be redirected to orders list where the user could easily place another order, edit or delete the existing ones. It was designed toeb be simple and  intuitive.
 
-  ![Alt text](static/media/images/orders_list.png "Order List")
+  ![Alt text](static/media/images/order-history.png "Order List")
 
  
 [Back to top](<#contents>)
@@ -173,7 +164,7 @@ Once the order is finished user will be redirected to orders list where the user
   ### Edit Order
 If the user choose to edit and existing order the app will be redirect the the order form page but retrieving the data from database for editing.
 
-  ![Alt text](static/media/images/edit_orders.png "Edit Order")
+  ![Alt text](static/media/images/edit-order.png "Edit Order")
 
 
 [Back to top](<#contents>)
@@ -181,7 +172,7 @@ If the user choose to edit and existing order the app will be redirect the the o
   ### Django Admin Panel
 The built in Django Admin panel was setted up to help the admin to manage the orders as well as reading the messages from costumers
 
-  ![Alt text](static/media/images/admin_neworder.png "Django Admin Panel")
+  ![Alt text](static/media/images/django-admin-dashboard.png "Django Admin Panel")
 
 [Back to top](<#contents>)
 
@@ -189,21 +180,21 @@ The built in Django Admin panel was setted up to help the admin to manage the or
 All new orders are set to be Pendind an  get easily be approved by the admin panel
 
 
-  ![Alt text](static/media/images/approve_orders.png "Approve Orders")
+  ![Alt text](static/media/images/django-admin-orders.png "Approve Orders")
 
 [Back to top](<#contents>)
 
   ### Order Details
 Admin can have access to the order details through the admin panel.
 
-  ![Alt text](static/media/images/order_details.png "Order Details")
+  ![Alt text](static/media/images/django-admin-orderdetail.png "Order Details")
 
 [Back to top](<#contents>)
 
   ### Admin Filters
 Admin have some filters feature to help locate orders such as pending orders, or approved ones and so on.
 
-  ![Alt text](static/media/images/filters.png "Admin Filters")
+  ![Alt text](static/media/images/django-admin-orders.png "Admin Filters")
 
 [Back to top](<#contents>)
 
@@ -212,14 +203,12 @@ Messages sent through the contact us page can be easily found on the admin panel
 
   ![Alt text](static/media/images/messages.png "Messages")
 
-  ![Alt text](static/media/images/message_details.png "Messages Detail")
-
 [Back to top](<#contents>)
 
 
 
   ### Future Features
-For future features I will definetly implement and disable past dates and out of work hours that I could not implement due the deadline. Also I would do some more UX design when delete or editing and a modal popup that gets a validation from user of their choice. Also a banner when order is created, updated or deleted to give user more assurance of their action. I would also implement and API system that could send a email confirmation to the user and the administrator thar a new order was created 
+For future features I will definetly implement and disable past dates and out of work hours that I could not implement due the deadline. I would also implement and API system that could send a email confirmation to the user and the administrator thar a new order was created 
 
 
 [Back to top](<#contents>)
