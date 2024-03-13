@@ -5,7 +5,6 @@ from django.contrib import messages
 from django.http import HttpResponse  # Import HttpResponse for debugging
 
 
-
 # Rendering home page
 def home(request):
     return render(request, 'index.html')
@@ -18,12 +17,14 @@ def new_order(request, id=0):
         if id == 0:
             form = NewOrderForm()
         else:
-            # if the id is not 0 it will retrieve data from database and fill the form
+            # if the id is not 0 it will retrieve data from database and
+            # fill the form
             order = NewOrderModel.objects.get(pk=id)
             form = NewOrderForm(instance=order)
         return render(request, 'new_order.html', {'form': form})
     else:
-        # if the method is POST then it will check the id value and post the form
+        # if the method is POST then it will check the id
+        # and post the form
         if id == 0:
             form = NewOrderForm(request.POST)
         else:
@@ -34,24 +35,21 @@ def new_order(request, id=0):
             order = form.save(commit=False)
             order.author = request.user
             order.save()
-            #checks if order is being updated or created to print out message.
+            # checks if order is being updated or created to print out message.
             if id == 0:
-                messages.success(request,
-                            f'Order created successfully!')
+                messages.success(request, 'Order created successfully!')
             elif id > 0:
-                messages.success(request,
-                            f'Order updated successfully!')
+                messages.success(request, 'Order updated successfully!')
             else:
-                messages.error(request,
-                            f'Something went wrong, please try again!')
+                messages.error(request, 'Something went wrong, please try again!')
             return redirect('/orderslist/')
         return render(request, 'new_order.html', {'form': form})
 
 
 # Rendering Order List page
 def orders_list(request):
-    #retrieving order list from database by author
-    context = {'orders_list':NewOrderModel.objects.filter(author=request.user)}
+    # retrieving order list from database by author
+    context = {'orders_list': NewOrderModel.objects.filter(author=request.user)}
     return render(request, 'orders_list.html', context)
 
 
@@ -59,8 +57,9 @@ def orders_list(request):
 def delete_order(request, id):
     order = NewOrderModel.objects.get(pk=id)
     order.delete()
-    messages.error(request, f'Order deleted successfully!')
+    messages.error(request, 'Order deleted successfully!')
     return redirect('/orderslist/')
+
 
 # Contact us
 def contact(request):
@@ -77,7 +76,6 @@ def contact(request):
             print(form.errors)
             messages.error(request, 'Something went wrong! Please try again.')
             return render(request, 'contact.html', {'form': form})  # Render the contact page with the invalid form
-
 
 
 # Rendering About Us page

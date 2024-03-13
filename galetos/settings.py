@@ -18,7 +18,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates') 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -30,18 +30,19 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-
-
 ALLOWED_HOSTS = [
     '8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
     'localhost', 'galetos-orderapp-pp4-1411404b0904.herokuapp.com',
-    'galetos-orderapp-pp4-1411404b0904.herokuapp.com/',
-    '8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu110.gitpod.io/']
+    'galetos-orderapp-pp4-1411404b0904.herokuapp.com',
+    '8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu110.gitpod.io'
+]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
-                        'https://galetos-orderapp-pp4-1411404b0904.herokuapp.com',
-                        'https://8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu109.gitpod.io',]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
+    'https://galetos-orderapp-pp4-1411404b0904.herokuapp.com',
+    'https://8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu109.gitpod.io',
+    'https://8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu110.gitpod.io'
+]
 
 # Application definition
 
@@ -174,7 +175,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
- 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
