@@ -6,10 +6,10 @@
         {% csrf_token %}
         <div class="row">
             <h3 class="col-md-12 text-center">Have a Project in mind?</h3>
-            <br>
+            <br/>
             <h4 class="col-md-12 text-center">Send us a message!</h4>
-            <br>
-            <br>
+            <br/>
+            <br/>
             <!--Defining what will be rendered from forms to the page-->
             <div class="col-md-6">{{ form.first_name|as_crispy_field }}</div>
             <div class="col-md-6">{{ form.last_name|as_crispy_field }}</div>
