@@ -1,27 +1,27 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 <div class="row mt-0">
-<hr class="mb-0">
-<div class="col m-12 mt-0">
-    <a href="{% url 'account_login' %}">
-        <!--definig the buttons of main menu in the home page-->
-        <div class="col m-1 mx-auto btn btn-success">
-            <i class="fa-regular fa-square-plus" style="color: #ffffff;"></i>
-            ORDER NOW
-        </div>
-    </a>
-    <a href="{% url 'contact' %}">
-        <div class="col m-1 mx-auto btn btn-info">
-            <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
-            CONTACT US
-        </div>
-    </a>
-    <a href="{% url 'about' %}">
-        <div class="col m-1 mx-auto btn btn-dark text-white">
-            <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
-            ABOUT US
-        </div>
-    </a>
-</div>
+    <hr class="mb-0">
+    <div class="col m-12 mt-0">
+        <a href="{% url 'account_login' %}">
+            <!--definig the buttons of main menu in the home page-->
+            <div class="col m-1 mx-auto btn btn-success">
+                <i class="fa-regular fa-square-plus" style="color: #ffffff;"></i>
+                ORDER NOW
+            </div>
+        </a>
+        <a href="{% url 'contact' %}">
+            <div class="col m-1 mx-auto btn btn-info">
+                <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                CONTACT US
+            </div>
+        </a>
+        <a href="{% url 'about' %}">
+            <div class="col m-1 mx-auto btn btn-dark text-white">
+                <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
+                ABOUT US
+            </div>
+        </a>
+    </div>
 </div>
 <hr class="my-4">
 <!-- Carousel images -->
@@ -38,8 +38,7 @@
             <img class="d-block w-100" src="{% static 'media/images/first.webp' %}" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="{% static 'media/images/second.webp' %}"
-                alt="Second slide">
+            <img class="d-block w-100" src="{% static 'media/images/second.webp' %}" alt="Second slide">
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="{% static 'media/images/third.webp' %}" alt="Third slide">
