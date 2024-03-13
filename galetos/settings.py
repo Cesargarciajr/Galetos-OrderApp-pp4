@@ -36,7 +36,7 @@ ALLOWED_HOSTS = [
     '8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
     'localhost', 'galetos-orderapp-pp4-1411404b0904.herokuapp.com',
     'galetos-orderapp-pp4-1411404b0904.herokuapp.com/',
-    '8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu109.gitpod.io']
+    '8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu110.gitpod.io/']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
                         'https://galetos-orderapp-pp4-1411404b0904.herokuapp.com',
