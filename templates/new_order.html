@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load crispy_forms_tags %} {% block content %} {% load static %}
-<form action="" method="POST" autocomplete="off">
+<form method="POST" autocomplete="off">
   {% csrf_token %}
   <div class="row">
     <h3 class="col-md-12 text-center mt-4">Order Details</h3>
@@ -11,8 +11,8 @@
   </div>
   <div class="row">
     <div class="col-md-5">{{ form.date|as_crispy_field }}</div>
-    <div class="col-md-4" id="id_time">{{ form.time|as_crispy_field }}</div>
-    <div class="col-md-3" value="1" min="1" max="99">{{ form.quantity|as_crispy_field }}</div>
+    <div class="col-md-4">{{ form.time|as_crispy_field }}</div>
+    <div class="col-md-3">{{ form.quantity|as_crispy_field }}</div>
     <div class="col-md-10">
       <br />
       <button type="submit" class="btn btn-primary">
