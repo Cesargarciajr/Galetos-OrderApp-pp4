@@ -28,7 +28,7 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
     - [Orders list](#orders-list)
     - [Edit Order](#edit-order)
     - [Messages](#messages)
-    - [Custom 404](#ustom-404)
+    - [Custom 404](#custom-404)
     - [Django Admin Panel](#django-admin-panel)
     - [Approve Orders](#approve-orders)
     - [Order Details](#order-details)
@@ -179,7 +179,7 @@ Messages sent through the contact us page can be easily found on the admin panel
   ### Custom 404 
 A custom 404 page or better UX experience with a button to go back to home page
 
-  ![Alt text](static/media/images/04.png "404 page")
+  ![Alt text](static/media/images/404.png "404 page")
 
 [Back to top](<#contents>)
 
