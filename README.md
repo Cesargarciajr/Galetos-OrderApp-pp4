@@ -27,11 +27,12 @@ Galeto's a Django/Python developed order app that was desinged for a friend of m
     - [Time Selection](#time-selection)
     - [Orders list](#orders-list)
     - [Edit Order](#edit-order)
+    - [Messages](#messages)
+    - [Custom 404](#ustom-404)
     - [Django Admin Panel](#django-admin-panel)
     - [Approve Orders](#approve-orders)
     - [Order Details](#order-details)
     - [Admin Filters](#admin-filters)
-    - [Messages](#messages)
     - [Future Features](#future-features)
   - [Testing](#testing)
     - [Bugs and Issues](#bugs-and-issues)
@@ -166,6 +167,19 @@ If the user choose to edit and existing order the app will be redirect the the o
 
   ![Alt text](static/media/images/edit-order.png "Edit Order")
 
+[Back to top](<#contents>)
+
+  ### Messages
+Messages sent through the contact us page can be easily found on the admin panel as well as the message details.
+
+  ![Alt text](static/media/images/messages.png "Messages")
+
+[Back to top](<#contents>)
+
+  ### Custom 404 
+A custom 404 page or better UX experience with a button to go back to home page
+
+  ![Alt text](static/media/images/04.png "404 page")
 
 [Back to top](<#contents>)
 

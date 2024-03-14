@@ -28,11 +28,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 ALLOWED_HOSTS = [
     '8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
-    'localhost', 'galetos-orderapp-pp4-1411404b0904.herokuapp.com',
+    'localhost',
     'galetos-orderapp-pp4-1411404b0904.herokuapp.com',
     '8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu110.gitpod.io'
 ]
@@ -41,7 +43,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-cesargarciajr-galetos-or-p6wqnvb7tm.us2.codeanyapp.com',
     'https://galetos-orderapp-pp4-1411404b0904.herokuapp.com',
     'https://8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu109.gitpod.io',
-    'https://8000-cesargarcia-galetosorde-8gxosb7znhe.ws-eu110.gitpod.io'
 ]
 
 # Application definition
