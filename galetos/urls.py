@@ -6,6 +6,4 @@ from .views import handler404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('orderapp.urls')),
-] 
-
-handler404 = 'galetos.views.handler404'
+]
